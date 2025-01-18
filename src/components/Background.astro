@@ -1,0 +1,62 @@
+---
+const gifs = [
+    "gifs/stars.gif",
+    "gifs/ascii.gif",
+    "gifs/letters.gif",
+    "gifs/hat.gif",
+    "gifs/gojo.gif",
+    "gifs/bmw.gif",
+    "gifs/genshin.gif",
+    "gifs/ghibili.gif",
+    "gifs/kaneki.gif",
+    "gifs/slayer.gif",
+    "gifs/sword.gif",
+    "gifs/whale.gif",
+    "gifs/white.gif",
+    "gifs/zero-two.gif",
+];
+
+const gifUrl = gifs[Math.floor(Math.random() * gifs.length)];
+---
+
+<div class="background">
+    <img
+        src={gifUrl}
+        alt="Background GIF"
+        decoding="async"
+        loading="lazy"
+        fetchpriority="high"
+        id="background-gif"
+    />
+</div>
+
+<style>
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.6; /* Adjust the opacity to make it translucent */
+    }
+
+    .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<script>
+    import { showToast } from "~/components/ui/toast";
+
+    const image = document.getElementById("background-gif");
+
+    image?.addEventListener('load', () => showToast({
+        title: "🍱 Background Loaded",
+        variant: "success",
+        duration: 700
+        })
+    );
+</script>
