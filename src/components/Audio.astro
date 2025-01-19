@@ -18,9 +18,7 @@ const randomSong = songs[Math.floor(Math.random() * songs.length)];
 <script>
     import { showToast } from "~/components/ui/toast";
 
-    const audio = document.getElementById(
-        "background-audio",
-    ) as HTMLAudioElement;
+    const audio = document.getElementById("background-audio");
 
     if (audio) {
         showToast({

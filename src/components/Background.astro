@@ -53,10 +53,11 @@ const gifUrl = gifs[Math.floor(Math.random() * gifs.length)];
 
     const image = document.getElementById("background-gif");
 
-    image?.addEventListener('load', () => showToast({
-        title: "🍱 Background Loaded",
-        variant: "success",
-        duration: 700
-        })
+    image?.addEventListener("load", () =>
+        showToast({
+            title: "🍱 Background Loaded",
+            variant: "success",
+            duration: 700,
+        }),
     );
 </script>
