@@ -1,7 +1,7 @@
 ---
+import Audio from "~/components/Audio.astro";
 import { getAnalytics } from "~/components/analytics/analyitcs";
 import Rybbit from "~/components/analytics/Rybbit.astro";
-import Audio from "~/components/Audio.astro";
 import Background from "~/components/Background.astro";
 import Theme from "~/components/Theme.astro";
 import { Toaster } from "~/components/ui/toast";
@@ -15,7 +15,7 @@ const hasAnalytics = isProd ? await getAnalytics() : false;
 ---
 
 <!doctype html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
